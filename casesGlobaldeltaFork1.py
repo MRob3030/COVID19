@@ -30,10 +30,12 @@ Globdelta = np.empty([sizedata,sizedate])
 Globdeltasum = np.empty([5,sizedate])
 Globdeltasum[0] = Globdelta[0]
 
-Globsum =   datanum.sum(axis=0)   
 
 # Sum the cases reports in each country k  for each date y
+Globsum =   datanum.sum(axis=0)   
 
+
+# Subtract the pervious day's cases in each country k  for each date y
 
 for k in range(0, sizedata):
     for y in range (5,sizedate):
